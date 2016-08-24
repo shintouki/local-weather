@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  background-color: #2B2B2B;
+  color: white;
+}
+  #title {
+  font-size: 70px;
+}
+
+#info {
+  font-size: 22px;
+}
+
+#temperature {
+  display: inline-block;
+}
+
+#unit {
+  display: inline-block;
+}
+
+#link {
+  color: #33FFFF;
+  text-decoration: none;
+}
+
+#profileLink {
+  text-decoration: none;
+  color: #33FFFF;
+}
