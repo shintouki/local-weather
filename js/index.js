@@ -1,4 +1,4 @@
-var location_data = "https://ip-api.com/json";
+var location_data = "https://ipapi.co/json"; 
 
 function getLat(coords, commaInd) {
   var latitude = coords.substring(0, commaInd);
@@ -21,13 +21,13 @@ function getCommaPos(coords) {
 $.getJSON(location_data, function(json) {
   var city = json.city;
   var country = json.country;
-  var regionName = json.regionName;
-  var lat = json.lat;
-  var lon = json.lon;
+  var regionName = json.region;
+  var lat = json.latitude;
+  var lon = json.longitude;
   console.log(lat);
   console.log(lon);
 
-  var api = "https://api.openweathermap.org/data/2.5/weather?"
+  var api = "https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?"
   var appid = "appid=b25d08c92b96e29e064a0022300c81ec";
   lat = "lat=" + lat + "&";
   lon = "lon=" + lon + "&";
@@ -39,7 +39,7 @@ $.getJSON(location_data, function(json) {
     var tempInCelsius = Math.round(json.main.temp - 273.15);
     var tempInFah = Math.round(tempInCelsius * 9 / 5 + 32);
     var weatherType = json.weather[0].main;
-    var icon = "https://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
+    var icon = "https://crossorigin.me/https://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
 
     $("#temperature").html(tempInCelsius);
     $("#weather_type").html(weatherType);
