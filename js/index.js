@@ -39,7 +39,7 @@ $.getJSON(location_data, function(json) {
     var tempInCelsius = Math.round(json.main.temp - 273.15);
     var tempInFah = Math.round(tempInCelsius * 9 / 5 + 32);
     var weatherType = json.weather[0].main;
-    var icon = "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
+    var icon = "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png";
 
     $("#temperature").html(tempInCelsius);
     $("#weather_type").html(weatherType);
